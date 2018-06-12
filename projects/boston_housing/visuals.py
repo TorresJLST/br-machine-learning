@@ -15,7 +15,7 @@ import sklearn.learning_curve as curves
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.cross_validation import ShuffleSplit, train_test_split
 
-def ModelLearning(X, y):
+def ModelLearning(X, y, eDepth):
     """ Calculates the performance of several models with varying sizes of training data.
         The learning and testing scores for each model are then plotted. """
     
@@ -29,8 +29,10 @@ def ModelLearning(X, y):
     fig = pl.figure(figsize=(10,7))
 
     # Create three different models based on max_depth
-    for k, depth in enumerate([1,3,6,10]):
-        
+    #for k, depth in enumerate([1,2,3,4,5,6,7,8,9,10]):
+    #for k, depth in enumerate([2,4,6,8,10]):
+    for k, depth in eDepth:
+    
         # Create a Decision tree regressor at max_depth = depth
         regressor = DecisionTreeRegressor(max_depth = depth)
 
@@ -45,7 +47,7 @@ def ModelLearning(X, y):
         test_mean = np.mean(test_scores, axis = 1)
 
         # Subplot the learning curve 
-        ax = fig.add_subplot(2, 2, k+1)
+        ax = fig.add_subplot(2,2, k+1)
         ax.plot(sizes, train_mean, 'o-', color = 'r', label = 'Training Score')
         ax.plot(sizes, test_mean, 'o-', color = 'g', label = 'Testing Score')
         ax.fill_between(sizes, train_mean - train_std, \
@@ -124,7 +126,7 @@ def PredictTrials(X, y, fitter, data):
         prices.append(pred)
         
         # Result
-        print "Trial {}: ${:,.2f}".format(k+1, pred)
+        print(("Trial {}: ${:,.2f}".format(k+1, pred)))
 
     # Display price range
-    print "\nRange in prices: ${:,.2f}".format(max(prices) - min(prices))
+    print("\nRange in prices: ${:,.2f}".format(max(prices) - min(prices)))
