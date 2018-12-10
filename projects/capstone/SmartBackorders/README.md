@@ -1,6 +1,6 @@
 # Machine Learning Engineer Nanodegree
 # Capstone Project
-## Project: Smart BackOrders - Análise e Predição de Pedidos Pendentes (BackOrders) utilizando Modelos de Inteligência Artificial
+## Smart BackOrders - Análise e Predição de Pedidos Pendentes (BackOrders) utilizando Modelos de Inteligência Artificial
 
 ### Visão Geral do Projeto
 Pedidos Pendentes (BackOrders) 
