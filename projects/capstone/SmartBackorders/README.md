@@ -50,6 +50,7 @@ Este projeto requer o **Python 3** Jupyter Notebook instalado e as seguintes bib
 
 ### Code
 ![](img/Metodologia.png)
+
 Etapa 01: Conhecer, Preparar e Limpar os Dados (análise preliminar de Features)
 - BackOrders_Etapa01_Cleaning-Data-Train.ipynb
 - BackOrders_Etapa01_Cleaning-Data-Test.ipynb
