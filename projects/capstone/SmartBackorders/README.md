@@ -29,6 +29,8 @@ Trabalhando para identificar peças em risco de atraso antes do evento, então o
 
 Este é o objetivo do projeto “Smart BackOrders: Análise e Predição de Pedidos Pendentes (BackOrders) utilizando Modelos de Inteligência Artificial”.
 
+![](img/BackOrder.png)
+
 ### Install
  
 Este projeto requer o **Python 3** Jupyter Notebook instalado e as seguintes bibliotecas:
